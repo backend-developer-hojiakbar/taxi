@@ -36,6 +36,7 @@ class Request(BaseModel):
         ("3", "3"),
         ("4", "4"),
     ]
+    car = models.CharField(max_length=30)
     yolovchiSoni = models.CharField(
         max_length=100,
         choices=Number,

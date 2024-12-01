@@ -5,7 +5,7 @@ from .models import Request, GetRequest, BalansToldirish, BalansYechish, Adverti
 class RequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Request
-        fields = ['id', 'user', 'request_type', 'where', 'whereTo', 'phone_number', 'yolovchiSoni', 'is_active']
+        fields = ['id', 'user', 'request_type', 'where', 'whereTo', 'phone_number', 'car', 'yolovchiSoni', 'is_active']
         read_only_fields = ('user',)
 
 
