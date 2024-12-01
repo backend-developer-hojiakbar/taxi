@@ -15,7 +15,7 @@ class RequestViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
-        user_profile = self.request.user.userprofile  # Assuming `userprofile` is linked to your authentication system
+        user_profile = self.request.user  # Assuming `userprofile` is linked to your authentication system
         serializer.save(user=user_profile)
 
 
